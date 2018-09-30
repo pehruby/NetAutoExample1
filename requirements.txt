@@ -1,0 +1,6 @@
+wheel
+virlutils
+ansible
+napalm
+nornir==1.1.0
+prettytable

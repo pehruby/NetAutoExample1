@@ -1,0 +1,49 @@
+---
+
+- name: vlan testing
+  hosts: access, dist
+  gather_facts: no
+
+
+  tasks:
+
+    - name: Create vlans
+      ios_config:
+        lines: "name {{item.name}}"
+        parents: "vlan {{item.vlan_id}}"
+      with_items: 
+      - "{{ vlans }}"
+
+- name: vlan testing
+  hosts: dist
+  gather_facts: no
+
+
+  tasks:
+
+    - name: Create vlan int
+      ios_config:
+        lines: 
+          - "ip address {{item.ip}} {{item.mask}}"
+          - "no shutdown"
+        parents: "int {{item.name}}"
+      with_items: 
+      - "{{ ip_iface }}"
+
+- name: vlan testing
+  hosts: dist, access
+  gather_facts: no
+
+
+  tasks:
+
+    - name: Physical ifaces properties
+      ios_config:
+        lines:
+          - "description {{item.desc}}" 
+          - "switchport trunk encapsulation dot1q"
+          - "switchport mode {{item.mode}}"
+          - "switchport access vlan {{item.a_vlan}}"
+        parents: "int {{item.name}}"
+      with_items: 
+      - "{{ iface }}"

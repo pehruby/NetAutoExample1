@@ -1,0 +1,63 @@
+# virlutils generated ansible file for sim id 
+#
+# the overall structure of the inventory follows best practices
+# at http://docs.ansible.com/ansible/latest/intro_inventory.html
+
+# we've rendered what we think is best if you disagree, override
+# virl.generators.ansible_inventory_generator
+
+# you can modify grouping behavior by adding extension entries
+# to your .virl file as such
+
+# <node name="router1" type="SIMPLE" subtype="CSR1000v" location="361,129" ipv4="172.16.252.6" ipv6="2001:db8:b:0:1::2">
+#    <extensions>
+#        <entry key="ansible_group" type="String">mygroup</entry>
+#    </extensions>
+# </node>
+
+all:
+  vars:
+    ansible_network_os: ios
+    nornir_nos: ios
+    ansible_ssh_common_args: '-o ProxyCommand="ssh -W %h:%p guest@10.105.139.157"'  # install ssh public key on proxy host !!! 
+    ansible_connection: network_cli 
+  children:
+    access:
+      hosts:
+
+        access1:
+          ansible_host: 10.255.0.8
+          console_server: 10.105.152.50
+          console_port: 17012
+
+        access2:
+          ansible_host: 10.255.0.9
+          console_server: 10.105.152.50
+          console_port: 17027
+    
+    dist:
+      hosts:
+
+        dist2:
+          ansible_host: 10.255.0.7
+          console_server: 10.105.152.50
+          console_port: 17031
+
+        dist1:
+          ansible_host: 10.255.0.6
+          console_server: 10.105.152.50
+          console_port: 17029
+    
+    routers:
+      hosts:
+
+        router2:
+          ansible_host: 10.255.0.5
+          console_server: 10.105.152.50
+          console_port: 17035
+
+        router1:
+          ansible_host: 10.255.0.4
+          console_server: 10.105.152.50
+          console_port: 17033
+    

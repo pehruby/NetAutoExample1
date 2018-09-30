@@ -1,0 +1,13 @@
+iface:
+  - name: GigabitEthernet0/1
+    desc: "Trunk to dist"
+    mode: trunk
+    a_vlan: 1
+  - name: GigabitEthernet0/2
+    desc: "LXC 11"
+    mode: access
+    a_vlan: 20
+  - name: GigabitEthernet0/3
+    desc: "LXC 12"
+    mode: access
+    a_vlan: 21

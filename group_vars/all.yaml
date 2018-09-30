@@ -1,0 +1,5 @@
+vlans:
+  - vlan_id: 20
+    name: Ans_Vlan_20
+  - vlan_id: 21
+    name: Ans_Vlan_21
