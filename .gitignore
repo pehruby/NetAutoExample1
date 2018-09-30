@@ -2,4 +2,5 @@
 .virl
 *.retry
 *.pyc
+*.log
 venv/
