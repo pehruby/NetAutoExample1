@@ -8,8 +8,8 @@ Created for NetDevOps Live! Code Exchange Challenge
 The script
 
 - utilizes the Nornir (1.x) and NAPALM frameworks
-- prints all interfaces which contain specified string in the description
-- prints MAC address entries specified by the part of the MAC address
+- prints all interfaces of device inventory group which contain specified string in the description
+- prints MAC address entries specified by the part of the MAC address for devices which are members of specified inventory group
 
 Usage:
 
