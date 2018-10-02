@@ -179,7 +179,7 @@ Password:
 +---------+-------------------+-----------+
 ```
 
-Connect to some node and check the ways how RSA keys on routers in VIRL are created.
+Connect to some node and check the way how RSA keys on routers in VIRL are created.
 Thanks to [sihart](https://community.cisco.com/t5/tools/generate-rsa-key-on-xr-in-virl-on-boot/td-p/3436035)
 
 Shutdown the simulation
