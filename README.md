@@ -89,7 +89,7 @@ virl up
 ```
 
 VIRL simulation topology:
-![alt text](https://github.com/pehruby/NetAutoExample1/blob/master/sketch.png "Topology")
+(https://github.com/pehruby/NetAutoExample1/blob/master/sketch.png "Topology")
 
 Enter 'virl nodes' command and note External Address of your ~mgmt-lxc
 
