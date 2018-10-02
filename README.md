@@ -88,6 +88,9 @@ Spin up the simulation
 virl up
 ```
 
+VIRL simulation topology:
+![alt text](https://github.com/pehruby/NetAutoExample1/blob/master/sketch.png "Topology")
+
 Enter 'virl nodes' command and note External Address of your ~mgmt-lxc
 
 ```text
@@ -174,6 +177,9 @@ Password:
 | access1 | 5E:00:00:03:80:14 |   Gi0/1   |
 +---------+-------------------+-----------+
 ```
+
+Connect to some node and check the ways how RSA keys on routers in VIRL are created.
+Thanks to [sihart](https://community.cisco.com/t5/tools/generate-rsa-key-on-xr-in-virl-on-boot/td-p/3436035)
 
 Shutdown the simulation
 
